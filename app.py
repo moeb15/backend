@@ -9,11 +9,11 @@ from resources.interests import InterestsResource
 from resources.cv import CV
 
 def create_app():
-    app = Flask(__name__)
+    application = app = Flask(__name__)
 
     register_extensions(app)
     register_resources(app)
-    return app
+    return application
 
 def register_extensions(app):
     CORS(app)
@@ -27,5 +27,5 @@ def register_resources(app):
     api.add_resource(CV, '/cv')
 
 if __name__ == '__main__':
-    app = create_app()
-    app.run()
+    application = create_app()
+    application.run()

@@ -26,4 +26,4 @@ def register_resources(application):
 
 if __name__ == '__main__':
     application = create_app()
-    application.run()
+    application.run(port=8000)

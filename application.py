@@ -15,12 +15,12 @@ def create_app():
     register_resources(application)
     return application
 
-def register_extensions(app):
-    CORS(app)
+def register_extensions(application):
+    CORS(application)
 
 
-def register_resources(app):
-    api = Api(app)
+def register_resources(application):
+    api = Api(application)
 
     api.add_resource(Homepage, '/')
     api.add_resource(InterestsResource, '/interests')

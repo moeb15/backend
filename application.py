@@ -9,10 +9,10 @@ from resources.interests import InterestsResource
 from resources.cv import CV
 
 def create_app():
-    application = app = Flask(__name__)
+    application = Flask(__name__)
 
-    register_extensions(app)
-    register_resources(app)
+    register_extensions(application)
+    register_resources(application)
     return application
 
 def register_extensions(app):
